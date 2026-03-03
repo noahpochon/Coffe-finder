@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Animation d'apparition fluide */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfaf5;
+    color: #4b3832;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les sections horizontalement */
+    gap: 20px;
+    padding: 40px 20px;
+    /* IMPORTANT : On décale le body pour laisser la place à la sidebar fixe */
+    margin-left: 240px; 
+    min-height: 100vh;
+}
+
+/* --- SECTION LOGO (PERFECT CENTERING) --- */
+section:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le logo et le texte horizontalement */
+    justify-content: center;
+    text-align: center;
+    background: white;
+    padding: 30px;
+}
+
+img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #4b3832;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+img:hover {
+    transform: scale(1.15) rotate(8deg); /* Zoom + rotation sympa */
+}
+
+p {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #4b3832;
+    margin: 0;
+}
+
+/* --- SECTIONS COMMUNES --- */
+section {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(75, 56, 50, 0.05);
+    max-width: 650px;
+    width: 100%;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.6s ease-out;
+}
+
+section:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 15px 35px rgba(75, 56, 50, 0.12);
+}
+
+/* --- FORMULAIRE --- */
+.search-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 18px;
+    border: 2px solid #f0e6e0;
+    border-radius: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #c4a484;
+    box-shadow: 0 0 15px rgba(196, 164, 132, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    background-color: #4b3832;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #6d4c41;
+    transform: scale(1.02);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* --- PANNEAU LATÉRAL (SIDEBAR) --- */
+.footer-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    background-color: #4b3832;
+    padding: 50px 30px;
+    border-radius: 0 30px 30px 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.link-item a {
+    color: #fdfaf5 !important;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.link-item a:hover {
+    color: #c4a484 !important;
+    transform: translateX(10px);
+}
+
+/* --- CARTE --- */
+iframe {
+    border-radius: 15px;
+    width: 100%;
+    display: block;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    body {
+        margin-left: 0; /* On enlève le décalage sur mobile */
+        padding-left: 20px;
+    }
+    .footer-panel {
+        display: none; /* Cache la barre sur mobile pour la lisibilité */
+    }
+}

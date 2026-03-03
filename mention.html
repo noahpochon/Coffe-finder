@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales - Coffee Tracker</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfaf5;
+            color: #4b3832;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 40px 20px;
+            margin-left: 240px; 
+            min-height: 100vh;
+        }
+
+        /* --- PANNEAU LATÉRAL --- */
+        .footer-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 240px;
+            height: 100vh;
+            background-color: #4b3832;
+            padding: 50px 30px;
+            border-radius: 0 30px 30px 0;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+        }
+
+        .link-item a {
+            color: #fdfaf5 !important;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: inline-block;
+        }
+
+        .link-item a:hover {
+            color: #c4a484 !important;
+            transform: translateX(10px) scale(1.1);
+        }
+
+        /* --- CONTENU --- */
+        section {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(75, 56, 50, 0.05);
+            max-width: 800px;
+            width: 100%;
+            animation: fadeIn 0.6s ease-out;
+            line-height: 1.6;
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: scale(1.01);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #4b3832;
+            border-bottom: 3px solid #c4a484;
+            display: inline-block;
+            padding-bottom: 5px;
+            font-size: 2rem;
+        }
+
+        h2 {
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+            color: #6d4c41;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .highlight {
+            color: #c4a484;
+            font-weight: bold;
+        }
+
+        a.external-link {
+            color: #6d4c41;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+
+        a.external-link:hover {
+            color: #c4a484;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            body { margin-left: 0; }
+            .footer-panel { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="footer-panel">
+        <div class="link-item"><a href="index.html">🏠 Accueil</a></div>
+        <div class="link-item"><a href="#">📁 GitHub</a></div>
+        <div class="link-item"><a href="#">🌐 Portfolio</a></div>
+    </div>
+
+    <section>
+        <h1>Mentions Légales</h1>
+
+        <h2>1. Présentation du site</h2>
+        <p>Le site <span class="highlight">Coffee Tracker</span> est un projet personnel de recherche de cafés, développé avec passion en PHP, HTML et CSS. ☕</p>
+
+        <h2>2. Hébergement</h2>
+        <p>Ce site est fièrement hébergé par <span class="highlight">Alwaysdata</span>.</p>
+        <p><strong>Adresse de l'hébergeur :</strong><br>
+        Alwaysdata SARL<br>
+        91 rue du Faubourg Saint-Honoré<br>
+        75008 Paris, France<br>
+        Site web : <a href="https://www.alwaysdata.com" class="external-link" target="_blank">www.alwaysdata.com</a></p>
+
+        <h2>3. Analyse d'audience</h2>
+        <p>Nous utilisons <span class="highlight">Umami</span> (<a href="https://umami.is/" class="external-link" target="_blank">umami.is</a>) pour suivre les statistiques de visite de manière totalement anonyme.</p>
+        <p>Aucun cookie de traçage n'est utilisé et aucune donnée personnelle n'est stockée, conformément au respect de la vie privée. 🛡️</p>
+
+        <h2>4. Propriété et Contact</h2>
+        <p>Le code source et le design sont réalisés à des fins pédagogiques. Pour toute question ou demande de retrait de contenu, vous pouvez me contacter via les liens présents dans le panneau latéral (GitHub / Portfolio).</p>
+    </section>
+
+</body>
+</html>
