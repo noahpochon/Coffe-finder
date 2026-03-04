@@ -1,0 +1,51 @@
+
+/* Style général */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f1ea;
+    color: #4a3728;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Titre principal */
+h3 {
+    color: #6f4e37;
+    border-bottom: 2px solid #d2b48c;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Liste des cafés */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Carte de chaque café */
+li {
+    background: #fff;
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: scale(1.02);
+    border-left: 5px solid #6f4e37;
+}
+
+/* Nom du café */
+li strong {
+    display: block;
+    color: #2c1e14;
+    font-size: 1.1em;
+}
+
+/* Adresse */
+li span {
+    font-size: 0.9em;
+    color: #8b5a2b;
+}
