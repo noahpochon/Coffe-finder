@@ -43,9 +43,5 @@ Pour faire tourner ce projet sur votre machine (Ubuntu/Debian/Mint) :
 
 4.  **Lancez** votre navigateur sur : `http://localhost/coffee-tracker`
 
-## ⚖️ Mentions Légales & Confidentialité
 
-Ce projet utilise **Umami** pour collecter des statistiques d'audience de manière totalement anonyme, sans stockage de données personnelles ni utilisation de cookies publicitaires. L'hébergement est assuré par **Alwaysdata**.
-
----
 Développé avec ❤️ par Noah Pochon
